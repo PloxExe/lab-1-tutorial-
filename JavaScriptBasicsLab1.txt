@@ -1,0 +1,207 @@
+Lab Practice: JavaScript Basics
+/*
+  Name: Walter R Giron
+  Student ID: 
+*/
+
+// holds variables 
+const base = 5;
+const hight =10;
+const area = (base * hight) /2;
+console.log(area);//logs area 
+
+const num1 = 5;
+const num2 = 3;
+console.log('the sum of '+ num1 +" and "+ num2 + ' is ' + (num1+num2));
+
+const age = 33; 
+console.log("My age is " + age + " years old.");
+
+
+console.log("In JavaScript, we use the backslash (\\) to escape special characters.");
+
+console.log('Einstein once said: "Life is like riding a bicycle. To keep your balance, you must keep moving."');
+
+const number1 = 10;
+const number2 = 5;  
+
+const comparison = number1 >= number2;
+console.log("Is the first number greater than or equal to the second? " + comparison);
+
+const number3= 8;  
+const number4 = 3;  
+
+const satisfyCondition = number3 > number4 && number4 > 0;
+console.log("if the first number is greater and secound is greater then zero should display true: " + satisfyCondition);
+
+const number5 = 8;  
+const number6 = 25;  
+
+const satisfyCondition1 = number5 === number6 || number6 < 10;
+console.log("if the first number an secound are the same and are less then 10 true if not false : " + satisfyCondition1);
+
+
+<html>
+  <head>
+    <title>Calculator</title>
+  </head>
+  <body>
+    <form>
+      <input type="text" id="operand1">
+      <input type="text" id="operand2">
+      <span>=</span>
+      <input type="text" id="result" disabled><br>
+      <button type="button" onclick="add()">+</button>
+      <button type="button" onclick="substract()">-</button>
+      <button type="button" onclick="clearInput()" class="clear">C</button><br>
+      <button type="button" onclick="multiply()">x</button>
+      <button type="button" onclick="divide()">/</button><br>
+    </form>
+  </body>
+</html>
+
+
+
+span {
+    font-size: 200%;  
+}
+
+input {
+  margin: 5px 5px 5px 0;
+  padding: 0;
+  width: 100px;
+  height: 40px;
+  font-size: 200%;  
+  text-align: right;
+}
+
+button {
+  margin: 5px 5px 5px 0;
+  padding: 0;
+  width: 105px;
+  height: 50px;
+  font-size: 200%;
+}
+
+.clear {
+  width: 125px;
+}
+
+// Add the values from input fields
+function add() {
+
+/* The expression below obtains the value from the input 
+  element in the form with id attribute equals to operand1. */
+
+ 	 let operand1 = document.querySelector("#operand1").value;
+ 	 console.log(operand1);
+  
+/* Note that the value is a string.
+   Thus, we need to convert the string value to a number to
+   perform arithmetic operations.
+*/
+
+  // The parseInt function converts a string containing a number into a number
+  operand1 = parseInt(operand1);
+  
+ 	let operand2 = document.querySelector("#operand2").value;
+  console.log(operand2);
+	operand2 = parseInt(operand2);
+  /* COMPLETE THIS FUNCTION */
+
+  let result = operand1 + operand2;
+
+  /* The expression below updates the value of the input element in the form
+  with id attribute equals to result. */
+  document.querySelector("#result").value = result;  
+}
+
+// Substract the values from input fields
+function substract() {
+		let operand1 = document.querySelector("#operand1").value;
+ 	 console.log(operand1);
+  
+/* Note that the value is a string.
+   Thus, we need to convert the string value to a number to
+   perform arithmetic operations.
+*/
+
+  // The parseInt function converts a string containing a number into a number
+  operand1 = parseInt(operand1);
+  
+ 	let operand2 = document.querySelector("#operand2").value;
+  console.log(operand2);
+	operand2 = parseInt(operand2);
+  /* COMPLETE THIS FUNCTION */
+
+  let result = operand1 - operand2;
+
+  /* The expression below updates the value of the input element in the form
+  with id attribute equals to result. */
+  document.querySelector("#result").value = result;  
+  /* COMPLETE THIS FUNCTION */
+}
+
+// Multiply the values from input fields
+function multiply() {
+ let operand1 = document.querySelector("#operand1").value;
+ 	 console.log(operand1);
+  
+/* Note that the value is a string.
+   Thus, we need to convert the string value to a number to
+   perform arithmetic operations.
+*/
+
+  // The parseInt function converts a string containing a number into a number
+  operand1 = parseInt(operand1);
+  
+ 	let operand2 = document.querySelector("#operand2").value;
+  console.log(operand2);
+	operand2 = parseInt(operand2);
+  /* COMPLETE THIS FUNCTION */
+
+  let result = operand1 * operand2;
+
+  /* The expression below updates the value of the input element in the form
+  with id attribute equals to result. */
+  document.querySelector("#result").value = result;  
+
+  /* COMPLETE THIS FUNCTION */
+}
+
+// Divide the values from input fields
+function divide() {
+ let operand1 = document.querySelector("#operand1").value;
+ 	 console.log(operand1);
+  
+/* Note that the value is a string.
+   Thus, we need to convert the string value to a number to
+   perform arithmetic operations.
+*/
+
+  // The parseInt function converts a string containing a number into a number
+  operand1 = parseInt(operand1);
+  
+ 	let operand2 = document.querySelector("#operand2").value;
+  console.log(operand2);
+	operand2 = parseInt(operand2);
+  /* COMPLETE THIS FUNCTION */
+
+  let result = operand1 / operand2;
+
+  /* The expression below updates the value of the input element in the form
+  with id attribute equals to result. */
+  document.querySelector("#result").value = result;  
+
+  /* COMPLETE THIS FUNCTION */
+}
+ 
+
+// Clear input fields
+function clearInput() {
+	document.querySelector("#operand1").value = "";
+	document.querySelector("#operand2").value = "";
+  document.querySelector("#result").value = "";
+}
+
+
